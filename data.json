@@ -2,16 +2,19 @@
     {
         "id": 1,
         "name": "Aldo",
-        "description": "Programer"
+        "description": "Programer",
+        "status": true
     },
     {
         "id": 2,
         "name": "Rafael",
-        "description": "DevOps"
+        "description": "DevOps",
+        "status": true
     },
     {
         "id": 3,
         "name": "Anna",
-        "description": "Designer"
+        "description": "Designer",
+        "status": true
     }
 ]

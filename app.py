@@ -25,7 +25,7 @@ def get_item(item_id):
 @app.route('/items', methods=['POST'])
 def create_item():
     new_item = request.get_json()
-    new_item['starus'] = len(data) + 1
+    new_item['id'] = len(data) + 1
     data.append(new_item)
     with open('data.json', 'w') as file:
         json.dump(data, file, indent=4)

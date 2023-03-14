@@ -26,6 +26,7 @@ def get_item(item_id):
 def create_item():
     new_item = request.get_json()
     new_item['id'] = len(data) + 1
+    new_item['status'] = False
     data.append(new_item)
     with open('data.json', 'w') as file:
         json.dump(data, file, indent=4)

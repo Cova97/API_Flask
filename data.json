@@ -16,11 +16,5 @@
         "name": "Anna",
         "description": "Designer",
         "status": false
-    },
-    {
-        "id": 4,
-        "name": "Yoli",
-        "description": "Programer",
-        "status": false
     }
 ]

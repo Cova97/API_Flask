@@ -47,16 +47,32 @@ def update_item(item_id):
 # Ruta para eliminar un registro existente
 @app.route('/items/<int:item_id>', methods=['DELETE'])
 def delete_item(item_id):
-    new_item = []
+    item_to_delete = None
     for item in data:
         if item['id'] == item_id:
-            new_item.append(item)
-    item = new_item
-    with open('data.json', 'w') as file:
-        json.dump(data, file, indent=4)
-    return jsonify({'message': 'Item deleted'})
+            item_to_delete = item
+            #break
+    
+    if item_to_delete is not None:
+        data.remove(item_to_delete)
+        with open('data.json', 'w') as file:
+            json.dump(data, file, indent=4)
+        return jsonify({'message': 'Item deleted'})
+    else:
+        return jsonify({'message': 'Item not found'})
 
 if __name__ == '__main__':
     app.run(debug = True)
 
 # Comentario para un deploy
+
+"""
+for item in data:
+        if item['id'] == item_id:
+            print('simon')
+            item.remove(item[item_id])
+    with open('data.json', 'w') as file:
+        json.dump(data, file, indent=4)
+    return jsonify({'message': 'Item deleted'})
+
+"""

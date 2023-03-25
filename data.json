@@ -3,18 +3,24 @@
         "id": 1,
         "name": "Aldo",
         "description": "Programer",
-        "status": true
+        "status": false
     },
     {
         "id": 2,
         "name": "Rafael",
         "description": "DevOps",
-        "status": true
+        "status": false
     },
     {
         "id": 3,
         "name": "Anna",
         "description": "Designer",
-        "status": true
+        "status": false
+    },
+    {
+        "id": 4,
+        "name": "Yoli",
+        "description": "Programer",
+        "status": false
     }
 ]

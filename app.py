@@ -36,10 +36,10 @@ def create_item():
 @app.route('/items/<int:item_id>', methods=['PUT'])
 def update_item(item_id):
     updated_item = request.get_json()
-    for i, item in enumerate(data):
+    for item in data:
         if item['id'] == item_id:
-            data[i] = updated_item
-            data[i]['id'] = item_id
+            #data[i] = updated_item
+            item['status'] = True
     with open('data.json', 'w') as file:
         json.dump(data, file, indent=4)
     return jsonify(updated_item)
